@@ -1,8 +1,8 @@
 <template>
   <div class="card border-secondary mb-3" style="max-width: 28rem;" @click="show(card.id)">
-    <div class="card-header">Question {{ card.id }}</div>
+    <div class="card-header" :id="'header'+card.id">Question {{ card.id }}</div>
     <div class="card-body text-secondary">
-      <h5 class="card-title">{{ card.question }}</h5>
+      <h5 class="card-title" :id="'question'+card.id">{{ card.question }}</h5>
       <p class="card-text" :id="card.id" style="visibility: hidden">{{ card.answer }}</p>
     </div>
   </div>

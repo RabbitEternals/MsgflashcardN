@@ -8,9 +8,9 @@
       <label for="answerField" class="form-label">Answer</label>
       <input id="answerField" class="form-control" placeholder="Answer" v-model="answer"/>
     </div>
-    <button class="btn btn-primary mb-4" :disabled="isDisabled" @click="add">Add</button>
+    <button class="btn btn-primary mb-4" :disabled="isDisabled" id="addButton" @click="add">Add</button>
     <ul class="list-group list-group-flush text-center">
-      <Card v-for="questions in cards" :key="questions.id"
+      <Card :id="'card'+questions.id" v-for="questions in cards" :key="questions.id"
              :card="questions"/>
     </ul>
   </div>
